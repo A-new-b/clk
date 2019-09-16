@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/Vivado/2018.3/bin/clk/clk.srcs/sources_1/new/clk_change.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_change
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/Vivado/2018.3/bin/clk/clk.srcs/sources_1/new/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/Vivado/2018.3/bin/clk/clk.srcs/sources_1/new/seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/Vivado/2018.3/bin/clk/clk.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/Vivado/2018.3/bin/clk/clk.srcs/sim_1/new/counter_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_sim

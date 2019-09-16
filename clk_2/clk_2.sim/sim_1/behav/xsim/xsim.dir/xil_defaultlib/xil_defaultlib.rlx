@@ -1,0 +1,7 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sim_1/new/clk_sim.v,1568616829,verilog,,,,clk_sim,,,,,,,,
+/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/clk_changer.v,1568616307,verilog,,/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sim_1/new/clk_sim.v,,clk_changer,,,,,,,,

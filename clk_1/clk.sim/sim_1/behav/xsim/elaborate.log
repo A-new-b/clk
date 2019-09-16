@@ -1,0 +1,17 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto cd63e8ae8fbc4a05bf3f6af54f006837 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot counter_sim_behav xil_defaultlib.counter_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/tools/Xilinx/Vivado/2018.3/bin/clk/clk.srcs/sources_1/new/clk_change.v" Line 22. Module clk_change doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clk_change
+Compiling module xil_defaultlib.counter
+Compiling module xil_defaultlib.seg
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.counter_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot counter_sim_behav
