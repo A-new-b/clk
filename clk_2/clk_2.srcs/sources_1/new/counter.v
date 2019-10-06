@@ -18,9 +18,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module counter(
-			input clk,		//ʱ���źţ�25MHz
-			input rst_n,	//��λ�źţ��͵�ƽ��Ч
-			output reg[15:0] display_num	//�������ʾ���ݣ�[15:12]--�����ǧλ��[11:8]--����ܰ�λ��[7:4]--�����ʮλ��[3:0]--����ܸ�λ
+			input clk,		//25Mhz
+			input rst_n,	//复位
+			input min_zero,
+			input second_zero,
+			input min_add,
+			input second_add,
+			input stop,
+			output reg[15:0] display_num	//[15:12]--[11:8]--[7:4]--[3:0]
 		);
 
 //`define SIMULATION_AT7
@@ -32,7 +37,7 @@ module counter(
 		
 //-------------------------------------------------
 //1s��ʱ�����߼�
-reg[24:0] timer_cnt;	//1s��������0-24999999
+reg[24:0] timer_cnt;	//24999999
 
 	//1s��ʱ����
 always @(posedge clk or negedge rst_n)
@@ -40,52 +45,83 @@ always @(posedge clk or negedge rst_n)
 	else if(timer_cnt < `MAX_CNT) timer_cnt <= timer_cnt+1'b1;
 	else timer_cnt <= 25'd0;
 
-wire timer_1s_flag = (timer_cnt == `MAX_CNT);		//1s��ʱ����־λ������Чһ��ʱ������
+wire timer_1s_flag = (timer_cnt == `MAX_CNT);		
 
-//-------------------------------------------------
-//�������ݲ����߼�
 
-	//��ʾ����ÿ�����
-always @(posedge clk or negedge rst_n)
+always @(posedge clk or negedge rst_n )
 	if(!rst_n) display_num <= 16'd0;
-	else if(timer_1s_flag) 
-	begin
-		if(display_num[3:0]==16'd9)
+	else if(second_zero)
 		begin
-			if(display_num[7:4]==16'd5)
+			display_num[15:12] <= 16'h0;
+			display_num[11:8] <= 16'h0;
+		end
+		
+	else if(min_zero)
+		begin
+				display_num[7:4]<=16'h0;
+				display_num[3:0]<=16'h0;
+		end
+	else if(min_add)
+		begin
+			if(display_num[11:8]==16'd9)
+			begin
+				if(display_num[15:12]>=16'd5)
+					begin
+						display_num[11:8]<=4'd0;
+						display_num[15:12]<=4'd0;
+					end
+
+				else
 				begin
-					if(display_num[11:8]==16'd9)
+				display_num[15:12]<=display_num[15:12]+1'b1;
+				display_num[11:8]<=1'b0;
+				end
+				
+			end
+			else
+			display_num[11:8]=display_num[11:8]+1'b1;
+			end
+	else if(timer_1s_flag || second_add) 
+		begin
+			if(stop)
+			begin
+				if(display_num[3:0]==16'd9)
+				begin
+					if(display_num[7:4]==16'd5)
 						begin
-							if(display_num[15:12]==16'd5)
+							if(display_num[11:8]==16'd9)
 								begin
-									display_num[3:0]=4'd0;
-									display_num[7:4]=4'd0;
-									display_num[11:8]=4'd0;
-									display_num[15:12]=4'd0;
+									if(display_num[15:12]==16'd5)
+										begin
+											display_num[3:0]<=4'd0;
+											display_num[7:4]<=4'd0;
+											display_num[11:8]<=4'd0;
+											display_num[15:12]<=4'd0;
+										end
+									else
+										begin
+											display_num[3:0]<=4'd0;
+											display_num[7:4]<=4'd0;
+											display_num[11:8]<=4'd0;
+											display_num[15:12]<=display_num[15:12]+1'b1;
+										end
 								end
 							else
 								begin
-									display_num[3:0]=4'd0;
-									display_num[7:4]=4'd0;
-									display_num[11:8]=4'd0;
-									display_num[15:12]=display_num[15:12]+1'b1;
+									display_num[3:0]<=4'd0;
+									display_num[7:4]<=4'd0;
+									display_num[11:8]<=display_num[11:8]+1'b1;
 								end
 						end
-					else
+					else 
 						begin
-							display_num[3:0]=4'd0;
-							display_num[7:4]=4'd0;
-							display_num[11:8]=display_num[11:8]+1'b1;
+							display_num[3:0]<=4'd0;
+							display_num[7:4]<=display_num[7:4]+1'b1;
 						end
 				end
-			else 
-				begin
-					display_num[3:0]=4'd0;
-					display_num[7:4]=display_num[7:4]+1'b1;
-				end
+				else
+					display_num <= display_num+1'b1;
+			end
 		end
-		else
-			display_num <= display_num+1'b1;
-	end
 endmodule
 

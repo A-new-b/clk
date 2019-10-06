@@ -32,7 +32,10 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/clk_changer.v
   /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/counter.v
+  /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/key_press_get.v
+  /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/remove_shake.v
   /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v
+  /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/stop.v
   /tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

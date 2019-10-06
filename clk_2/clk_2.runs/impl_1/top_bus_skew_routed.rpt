@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Sep 16 15:48:19 2019
-| Host         : jue-Lenovo-ideapad-320S-14IKB running 64-bit unknown
+| Date         : Sun Oct  6 20:18:57 2019
+| Host         : jue-Lenovo-ideapad-320S-14IKB running 64-bit Ubuntu 18.04.2 LTS
 | Command      : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
 | Design       : top
 | Device       : 7a35t-ftg256

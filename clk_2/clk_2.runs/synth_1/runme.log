@@ -14,15 +14,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23390 
+INFO: Helper process launched with PID 24099 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1360.172 ; gain = 69.891 ; free physical = 820 ; free virtual = 1954
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1360.727 ; gain = 13.891 ; free physical = 948 ; free virtual = 2381
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'clk_changer' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/clk_changer.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'clk_changer' (1#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/clk_changer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'remove_shake' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/remove_shake.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'remove_shake' (2#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/remove_shake.v:22]
+INFO: [Synth 8-6157] synthesizing module 'stop' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/stop.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'stop' (3#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/stop.v:22]
+INFO: [Synth 8-6157] synthesizing module 'key_press_get' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/key_press_get.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'key_press_get' (4#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/key_press_get.v:22]
 INFO: [Synth 8-6157] synthesizing module 'counter' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/counter.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'counter' (2#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/counter.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (5#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/counter.v:20]
 INFO: [Synth 8-6157] synthesizing module 'seg' [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v:1]
 	Parameter NUM0 bound to: 8'b00111111 
 	Parameter NUM1 bound to: 8'b00000110 
@@ -49,10 +55,13 @@ INFO: [Synth 8-6157] synthesizing module 'seg' [/tools/Xilinx/Vivado/2018.3/bin/
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v:66]
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v:99]
 WARNING: [Synth 8-5788] Register dtube_data_1_reg in module seg is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v:67]
-INFO: [Synth 8-6155] done synthesizing module 'seg' (3#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'top' (4#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'seg' (6#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/seg.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (7#1) [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design stop has unconnected port key_press[3]
+WARNING: [Synth 8-3331] design stop has unconnected port key_press[2]
+WARNING: [Synth 8-3331] design stop has unconnected port key_press[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1405.922 ; gain = 115.641 ; free physical = 831 ; free virtual = 1968
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1406.477 ; gain = 59.641 ; free physical = 959 ; free virtual = 2395
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -65,10 +74,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1405.922 ; gain = 115.641 ; free physical = 828 ; free virtual = 1965
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1406.477 ; gain = 59.641 ; free physical = 959 ; free virtual = 2394
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1405.922 ; gain = 115.641 ; free physical = 828 ; free virtual = 1965
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1406.477 ; gain = 59.641 ; free physical = 959 ; free virtual = 2394
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tftg256-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -79,35 +88,36 @@ Parsing XDC File [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/constrs_1/new
 Finished Parsing XDC File [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/constrs_1/new/clk_c.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.srcs/constrs_1/new/clk_c.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1717.336 ; gain = 0.000 ; free physical = 556 ; free virtual = 1724
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.898 ; gain = 0.000 ; free physical = 687 ; free virtual = 2153
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1717.336 ; gain = 0.000 ; free physical = 557 ; free virtual = 1725
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.898 ; gain = 0.000 ; free physical = 688 ; free virtual = 2153
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1717.336 ; gain = 0.000 ; free physical = 557 ; free virtual = 1725
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1717.336 ; gain = 0.000 ; free physical = 557 ; free virtual = 1725
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.898 ; gain = 0.000 ; free physical = 688 ; free virtual = 2153
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.898 ; gain = 0.000 ; free physical = 688 ; free virtual = 2153
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 626 ; free virtual = 1794
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 757 ; free virtual = 2222
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 626 ; free virtual = 1794
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 757 ; free virtual = 2222
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 627 ; free virtual = 1796
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 758 ; free virtual = 2223
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "key_halue" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "display_num" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "current_display_num" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 618 ; free virtual = 1787
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 748 ; free virtual = 2214
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -120,22 +130,26 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     20 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 3     
 	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
+	               20 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
-	                4 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 9     
-	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 17    
+	   2 Input      8 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -153,6 +167,24 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
+Module remove_shake 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module stop 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module key_press_get 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
 Module counter 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -161,8 +193,9 @@ Detailed RTL Component Info :
 +---Registers : 
 	               16 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 9     
-	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 17    
+	   2 Input      8 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 1     
 Module seg 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -191,11 +224,12 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5544] ROM "seg1/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "rm1/key_halue" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "seg1/current_display_num" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\clk1/clk_counter_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\seg1/dtube_data_1_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 603 ; free virtual = 1775
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 733 ; free virtual = 2203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,13 +241,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 472 ; free virtual = 1652
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 600 ; free virtual = 2077
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1717.336 ; gain = 427.055 ; free physical = 472 ; free virtual = 1651
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 600 ; free virtual = 2077
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -225,7 +259,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -249,7 +283,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -262,7 +296,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -274,25 +308,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -309,51 +343,55 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    11|
-|3     |LUT1   |     3|
-|4     |LUT2   |    14|
-|5     |LUT3   |     7|
-|6     |LUT4   |    11|
-|7     |LUT5   |     7|
-|8     |LUT6   |    50|
-|9     |FDCE   |    57|
-|10    |FDPE   |    10|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     4|
+|4     |LUT2   |    15|
+|5     |LUT3   |    30|
+|6     |LUT4   |    25|
+|7     |LUT5   |     9|
+|8     |LUT6   |    56|
+|9     |FDCE   |    83|
+|10    |FDPE   |    21|
 |11    |FDRE   |     7|
-|12    |IBUF   |     2|
+|12    |IBUF   |     8|
 |13    |OBUF   |    12|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+-----------+------------+------+
-|      |Instance   |Module      |Cells |
-+------+-----------+------------+------+
-|1     |top        |            |   193|
-|2     |  clk1     |clk_changer |     3|
-|3     |  counter1 |counter     |   120|
-|4     |  seg1     |seg         |    54|
-+------+-----------+------------+------+
++------+-----------+----------------+------+
+|      |Instance   |Module          |Cells |
++------+-----------+----------------+------+
+|1     |top        |                |   288|
+|2     |  clk1     |clk_changer     |     3|
+|3     |  counter1 |counter         |   124|
+|4     |  m        |key_press_get   |     9|
+|5     |  rm1      |remove_shake    |    68|
+|6     |  s        |key_press_get_0 |     7|
+|7     |  s1       |stop            |     2|
+|8     |  seg1     |seg             |    53|
++------+-----------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.344 ; gain = 435.062 ; free physical = 470 ; free virtual = 1650
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.898 ; gain = 377.062 ; free physical = 599 ; free virtual = 2075
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1725.344 ; gain = 123.648 ; free physical = 525 ; free virtual = 1704
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1725.352 ; gain = 435.062 ; free physical = 524 ; free virtual = 1704
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1723.898 ; gain = 59.641 ; free physical = 653 ; free virtual = 2130
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.906 ; gain = 377.062 ; free physical = 653 ; free virtual = 2130
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1725.352 ; gain = 0.000 ; free physical = 467 ; free virtual = 1647
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.906 ; gain = 0.000 ; free physical = 596 ; free virtual = 2073
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1725.352 ; gain = 435.180 ; free physical = 524 ; free virtual = 1704
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1725.352 ; gain = 0.000 ; free physical = 524 ; free virtual = 1704
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1723.906 ; gain = 377.180 ; free physical = 652 ; free virtual = 2129
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1723.906 ; gain = 0.000 ; free physical = 652 ; free virtual = 2129
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/tools/Xilinx/Vivado/2018.3/bin/clk_2/clk_2.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Sep 16 15:47:34 2019...
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  6 20:18:15 2019...
